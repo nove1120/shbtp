@@ -1,0 +1,93 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="3dp"
+
+    app:cardCornerRadius="5dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+
+
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookImageView"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookNameText"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp">
+            <TextView
+                android:id="@+id/symbolText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="¥"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/priceRed"
+                android:textSize="12sp"/>
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:textColor="@color/priceRed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/flagNewText"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="5dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="全新"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="9sp"
+                android:visibility="invisible"
+                android:background="@drawable/corner_view"/>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/line1"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#EEEEEE"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+
+
+            android:textSize="10sp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

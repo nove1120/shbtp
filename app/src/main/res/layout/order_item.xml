@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    
+    >
+
+    <ImageView
+        android:id="@+id/bookImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/loading_image"
+        android:layout_marginStart="15dp"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/bookNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toTopOf="@+id/bookImage"
+        app:layout_constraintStart_toEndOf="@+id/bookImage"
+        android:text=""
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:gravity="center|left"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/symbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/bookImage"
+        app:layout_constraintBottom_toTopOf="@+id/orderStateText"
+        android:layout_marginStart="10dp"
+        android:text="¥"
+        android:textColor="@color/priceRed"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/symbolText"
+        app:layout_constraintBottom_toBottomOf="@+id/symbolText"
+        android:layout_marginStart="2dp"
+
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:text=""
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/priceRed"
+        android:textSize="16sp"/>
+    <ImageView
+        android:id="@+id/orderStateImage"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toTopOf="@+id/orderStateText"
+        app:layout_constraintBottom_toBottomOf="@+id/bookImage"
+        app:layout_constraintStart_toEndOf="@+id/bookImage"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_complete"/>
+    <TextView
+        android:id="@+id/orderStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bookImage"
+        app:layout_constraintStart_toEndOf="@+id/orderStateImage"
+        android:text="交易成功"
+        android:textColor="@color/textColor"
+        android:gravity="center"
+        android:layout_marginStart="2dp"/>
+    <View
+        android:id="@+id/line"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorBookUploadEditLine"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/bookImage"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+        android:id="@+id/chatImage"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toTopOf="@+id/chatText"
+        app:layout_constraintBottom_toBottomOf="@+id/chatText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/ic_chat_order"
+        android:layout_marginStart="15dp"
+       />
+
+    <TextView
+        android:id="@+id/chatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chatImage"
+        android:text=""
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/functionText"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner_search_button"
+        android:layout_marginEnd="15dp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

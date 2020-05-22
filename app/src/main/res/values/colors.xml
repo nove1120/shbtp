@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fa65c294</color>
+    <color name="colorPrimaryDark">#fa65c294</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="actionBarLayout">#fa65c294</color>
+    <color name="backgroundGray">#FFECECEC</color>
+
+    <color name="colorLoginEditLine">#dd444444</color>
+    <color name="colorBookUploadEditLine">#33444444</color>
+
+    <color name="textColor">#A5000000</color>
+    <color name="textColorBlack">#D0000000</color>
+    <color name="textColorGray">#77000000</color>
+    <!--corner_view颜色 !-->
+    <color name="priceRed">#FF2800</color>
+    <!--图片选择组件颜色颜色 !-->
+    <color name="color_f6">#f6f6f6</color>
+
+    <!--searchResultActivity颜色 !-->
+    <color name="searchResultLine">#22000000</color>
+    <color name="searchResultTextBlack">#BB000000</color>
+    <color name="searchResultTextGray">#90000000</color>
+    <color name="drawerLayoutButtonTextGray">#CC000000</color>
+    <color name="drawerLayoutButtonBgGray">#10000000</color>
+    <color name="drawerLayoutButtonTextClick">#b0000000</color>
+
+    <!--searchActivity颜色 !-->
+    <color name="ssearchHistoryTextGray">#05000000</color>
+
+    <!--    my fragment color-->
+    <color name="personalPageTextColor">#88000000</color>
+
+    <!--    personalPage-->
+    <color name="friendTextColor">#DD000000</color>
+</resources>

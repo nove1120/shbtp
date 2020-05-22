@@ -1,0 +1,13 @@
+<resources>
+    <string name="server_url">http://192.168.0.101:8081</string>
+    <string name="app_name">二手书交易</string>
+    <string name="login_title">账号登录</string>
+    <string name="login_sms_title">快速登录</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">首页</string>
+    <string name="title_message">消息</string>
+    <string name="title_persion">我的</string>
+
+
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bookCategory">
+        <item>A 马列主义、毛泽东思想、邓小平理论</item>
+        <item>B 哲学、宗教</item>
+        <item>C 社会科学总论</item>
+        <item>D 政治、法律</item>
+        <item>E 军事</item>
+        <item>F 经济</item>
+        <item>G 文化、科学、教育、体育</item>
+        <item>H 语言、文字</item>
+        <item>I 文学</item>
+        <item>J 艺术</item>
+        <item>K 历史、地理</item>
+        <item>N 自然科学总论</item>
+        <item>O 数理科学和化学</item>
+        <item>P 天文学、地球科学</item>
+        <item>Q 生物科学</item>
+        <item>R 医药、卫生</item>
+        <item>S 农业科学</item>
+        <item>T 工业技术</item>
+        <item>U 交通运输</item>
+        <item>V 航空、航天</item>
+        <item>X 环境科学、劳动保护科学（安全科学)</item>
+        <item>Z 综合性图书</item>
+    </string-array>
+
+    <string-array name="bookGrade">
+        <item>全新未使用</item>
+        <item>有轻微使用痕迹</item>
+        <item>有污渍折痕变色</item>
+        <item>有破损缺页</item>
+        <item>垃圾成色</item>
+    </string-array>
+
+    <string-array name="province">
+        <item>全国</item>
+        <item>北京</item>
+        <item>天津</item>
+        <item>河北</item>
+        <item>山西</item>
+        <item>内蒙古</item>
+        <item>辽宁</item>
+        <item>吉林</item>
+        <item>黑龙江</item>
+        <item>上海</item>
+        <item>江苏</item>
+        <item>浙江</item>
+        <item>安徽</item>
+        <item>福建</item>
+        <item>江西</item>
+        <item>山东</item>
+        <item>河南</item>
+        <item>湖北</item>
+        <item>湖南</item>
+        <item>广东</item>
+        <item>广西</item>
+        <item>海南</item>
+        <item>重庆</item>
+        <item>四川</item>
+        <item>贵州</item>
+        <item>云南</item>
+        <item>西藏</item>
+        <item>陕西</item>
+        <item>甘肃</item>
+        <item>青海</item>
+        <item>宁夏</item>
+        <item>新疆</item>
+        <item>台湾</item>
+        <item>香港</item>
+        <item>澳门</item>
+    </string-array>
+
+    <string-array name="genderSelect">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+</resources>

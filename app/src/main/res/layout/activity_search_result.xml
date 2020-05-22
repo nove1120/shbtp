@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.SearchActivity">
+
+    <ImageView
+        android:id="@+id/returnButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/editLayout"
+        android:layout_marginStart="4dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/editLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/returnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner_search2_box"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        >
+        <TextView
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:layout_gravity="center"
+            android:textColor="#FF000000"
+            android:textSize="15sp"
+            android:background="@null"
+            android:lines="1"
+            android:paddingStart="5dp"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rankLayout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLayout"
+        android:layout_marginTop="4dp"
+        >
+
+        <TextView
+            android:id="@+id/compRankText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="综合排序"
+            android:paddingEnd="4dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#BB000000"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/priceLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/priceRankText"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+
+            android:text="价格"
+            android:textColor="@color/searchResultTextGray"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_gravity="center|left"
+
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/priceUpImage"
+                android:layout_width="15dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_up"
+
+                android:layout_gravity="center|left"/>
+            <ImageView
+                android:id="@+id/priceDownImage"
+                android:layout_width="15dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_down"
+
+                android:layout_gravity="center|left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/locationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_gravity="center|left">
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+
+            android:text="区域"
+            android:textColor="@color/searchResultTextGray"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:gravity="center|right"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="8dp"
+            android:layout_weight="0"
+            android:src="@drawable/ic_down"
+            android:layout_gravity="center|start"/>
+        <com.nove1120.widget.MySpinner
+            android:id="@+id/locationSpinner"
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:entries="@array/province"
+            android:spinnerMode="dropdown"
+            android:dropDownWidth="1000dp"
+            android:dropDownHeight="100dp"
+            android:dropDownVerticalOffset="40dp"
+            android:background="@null"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingEnd="20dp"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="@color/searchResultLine"
+               android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/screenText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="筛选"
+                android:textColor="@color/searchResultTextGray"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginStart="10dp"/>
+            <ImageView
+                android:id="@+id/screenImage"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_screen"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/searchResultLine"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/rankLayout"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundGray"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
+        android:layout_gravity="right"
+        >
+        <TextView
+
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快速筛选"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:background="#FFF"
+
+            android:layout_marginTop="10dp"
+            >
+
+
+                <TextView
+                    android:id="@+id/newText"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_corner_search_button"
+                    android:text="全新"
+                    android:textSize="14sp"
+                    android:textColor="@color/drawerLayoutButtonTextGray"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/freeText"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_corner_search_button"
+                    android:text="免费送"
+                    android:textSize="14sp"
+                    android:textColor="@color/drawerLayoutButtonTextGray"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+
+                    />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格区间"
+            android:layout_marginTop="18dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            >
+
+
+                <EditText
+                    android:id="@+id/priceMinEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/priceLine"
+                    android:background="@drawable/rounded_corner_search_button"
+                    android:textSize="14sp"
+                    android:textColor="@color/drawerLayoutButtonTextGray"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:gravity="left|center"
+                    android:layout_marginEnd="10dp"
+                    android:hint="最低价"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="8"
+                    />
+
+            <View
+                android:id="@+id/priceLine"
+                android:layout_height="1dp"
+                android:layout_width="15dp"
+                android:background="@color/drawerLayoutButtonBgGray"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                />
+
+
+                <EditText
+                    android:id="@+id/priceMaxEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/priceLine"
+                    android:layout_gravity="right"
+                    android:background="@drawable/rounded_corner_search_button"
+                    android:textSize="14sp"
+                    android:textColor="@color/drawerLayoutButtonTextGray"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:gravity="left|center"
+                    android:layout_marginStart="10dp"
+                    android:hint="最高价"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="8"
+                    />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布时间"
+            android:layout_marginTop="18dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:background="#FFF"
+
+            android:layout_marginTop="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/day1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_search_button"
+                android:text="1天内"
+                android:textSize="14sp"
+                android:textColor="@color/drawerLayoutButtonTextGray"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/day7Text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_search_button"
+                android:text="7天内"
+                android:textSize="14sp"
+                android:textColor="@color/drawerLayoutButtonTextGray"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:layout_marginStart="15dp"
+
+                />
+
+            <TextView
+                android:id="@+id/day14Text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_search_button"
+                android:text="14天内"
+                android:textSize="14sp"
+                android:textColor="@color/drawerLayoutButtonTextGray"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:layout_marginStart="15dp"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/resetText"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_search_button"
+                android:text="重置"
+                android:textSize="16sp"
+                android:textColor="@color/drawerLayoutButtonTextGray"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                />
+            <TextView
+                android:id="@+id/confirmText"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_search_button_conform"
+                android:text="确定"
+                android:textSize="16sp"
+                android:textColor="@color/drawerLayoutButtonTextGray"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:layout_weight="5"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="5dp"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

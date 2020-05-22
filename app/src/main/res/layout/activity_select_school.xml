@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.BookBaseEditActivity">
+
+    <ImageView
+        android:id="@+id/returnButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="选择高校"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textColor="#FF000000"
+        android:textSize="18sp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+
+        <Spinner
+            android:id="@+id/spinner_sheng"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:popupBackground="#A7C0DC"
+            android:spinnerMode="dialog"
+            />
+        <View
+            android:id="@+id/line2"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorBookUploadEditLine" />
+
+        <Spinner
+            android:id="@+id/spinner_shi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:popupBackground="#A7C0DC"
+            android:spinnerMode="dialog"
+            />
+        <View
+            android:id="@+id/line3"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorBookUploadEditLine" />
+
+        <Spinner
+            android:id="@+id/spinner_school"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:popupBackground="#eeeff3"
+            android:spinnerMode="dialog"
+            />
+        <View
+            android:id="@+id/line4"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorBookUploadEditLine" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_gravity="center"
+        android:text="确定"
+        app:layout_constraintTop_toBottomOf="@+id/layout_select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

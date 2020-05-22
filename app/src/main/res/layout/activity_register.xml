@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/login_background">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:paddingStart="26dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="30sp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/password1Edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="20sp"
+            android:maxLength="30"
+            android:hint="设置密码 8-16位"
+            android:lines="1"
+            android:inputType="textPassword"
+
+            />
+
+
+        <Button
+            android:id="@+id/delPassword1Button"
+            android:visibility="invisible"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="26dp"
+            android:background="@null"
+            android:text="✕"
+            android:textColor="#aa222222"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorLoginEditLine"
+        android:layout_marginRight="26dp"
+        android:layout_marginLeft="26dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/password2Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:background="@null"
+            android:maxLength="16"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="20sp"
+            android:hint="请再次输入密码"
+            android:lines="1"/>
+
+        <Button
+            android:id="@+id/delPassword2Button"
+            android:visibility="invisible"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="26dp"
+            android:background="@null"
+            android:text="✕"
+            android:textColor="#aa222222"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorLoginEditLine"
+        android:layout_marginRight="26dp"
+        android:layout_marginLeft="26dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="同意"
+            android:textSize="14sp"/>
+        <Button
+            android:id="@+id/protocol1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@null"
+            android:text="《用户服务协议》"
+            android:layout_marginTop="5dp"
+            android:textColor="#00CDCD"
+            android:textSize="14sp"/>
+        <Button
+            android:id="@+id/protocol2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@null"
+            android:text="《隐私政策》"
+            android:textColor="#00CDCD"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="立即注册"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"/>
+
+
+
+
+</LinearLayout>

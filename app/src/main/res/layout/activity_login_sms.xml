@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/login_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_sms_title"
+        android:paddingStart="26dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="30sp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/phoneNumberEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="20sp"
+            android:maxLength="11"
+            android:hint="请输入手机号码"
+            android:digits="0123456789"
+            android:lines="1"
+            android:inputType="phone"
+
+            />
+
+
+        <Button
+            android:id="@+id/deletePhoneNumberButton"
+            android:visibility="invisible"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="26dp"
+            android:background="@null"
+            android:text="✕"
+            android:textColor="#aa222222"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorLoginEditLine"
+        android:layout_marginRight="26dp"
+        android:layout_marginLeft="26dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/verificationCodeEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:background="@null"
+            android:maxLength="6"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="20sp"
+            android:hint="验证码"
+            android:lines="1"/>
+
+        <Button
+            android:id="@+id/getVerificationCodeButton"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/rounded_corner_get_numb"
+            android:text="获取验证码"
+            android:textColor="#aa222222"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorLoginEditLine"
+        android:layout_marginRight="26dp"
+        android:layout_marginLeft="26dp"/>
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登 录"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/passwordLoginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:text="密码登录" />
+    </LinearLayout>
+
+
+</LinearLayout>
